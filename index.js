@@ -61,12 +61,29 @@ $(document).ready(function () {
     // Generar ticket (aquí puedes generar el ticket como prefieras)
     const fechaFormateada = formatearFecha(fecha);
     const ticket = {
-      fecha: fechaFormateada,
-      direccion: direccion,
-      fotos: fotos,
-      servicio: servicio,
-      costoTotal: costoTotal.toFixed(2),
+      Fecha: fechaFormateada,
+      Direccion: direccion,
+      Fotos: fotos,
+      Servicio: servicio,
+      Costo: costoTotal.toFixed(2),
     };
+
+    function descargarTicketPDF(ticket) {
+        const doc = new window.jspdf.jsPDF();
+      
+        const lineHeight = 20;
+        let currentLine = 0;
+      
+        doc.setFontSize(18);
+        doc.text("Ticket de Fotografía", 20, lineHeight * ++currentLine);
+      
+        doc.setFontSize(12);
+        for (const [key, value] of Object.entries(ticket)) {
+          doc.text(`${key}: ${value}`, 20, lineHeight * ++currentLine);
+        }
+      
+        doc.save("ticket_fotografia.pdf");
+      }
 
     console.log(ticket);
     alert(
@@ -74,9 +91,13 @@ $(document).ready(function () {
         2
       )}`
     );
-    alert("Ticket generado con éxito");
+    descargarTicketPDF(ticket);
+    // alert("Ticket generado con éxito");
 
     // Limpiar formulario
     $("#formulario-fotografia")[0].reset();
   });
 });
+
+
+
