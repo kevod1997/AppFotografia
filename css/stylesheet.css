@@ -1,0 +1,11 @@
+@import "colors.css";
+@import "common.css";
+@import "header.css";
+@import "navbar.css";
+@import "aside.css";
+@import "footer.css";
+@import "main.css";
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
