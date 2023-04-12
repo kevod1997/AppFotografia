@@ -45,6 +45,5 @@
 @media screen and (min-width: 768px){
     .menu{
         flex-direction: row;
-        transform: translateY(0);
     }
 }
