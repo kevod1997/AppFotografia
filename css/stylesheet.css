@@ -1,0 +1,26 @@
+@import "header.css";
+@import "navbar.css";
+@import "aside.css";
+@import "footer.css";
+@import "main.css";
+
+.row{
+    display: flex;
+}
+img{
+    border-radius: 10px;
+    width: 100%
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media only screen and (max-width: 768px) {
+    .row{
+        display: contents;
+    }
+}

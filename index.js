@@ -58,7 +58,7 @@ $(document).ready(function () {
     const multiplicadorServicio = preciosServicios[servicio];
     const costoTotal = precioPaquete * multiplicadorServicio;
 
-    // Generar ticket (aquí puedes generar el ticket como prefieras)
+    // Generar ticket 
     const fechaFormateada = formatearFecha(fecha);
     const ticket = {
       Fecha: fechaFormateada,
@@ -67,6 +67,9 @@ $(document).ready(function () {
       Servicio: servicio,
       Costo: costoTotal.toFixed(2),
     };
+
+
+    /* Aquí puedes generar el ticket como prefieras, por ejemplo, con jspdf: https://parall.ax/products/jspdf */
 
     function descargarTicketPDF(ticket) {
         const doc = new window.jspdf.jsPDF();
@@ -85,7 +88,8 @@ $(document).ready(function () {
         doc.save("ticket_fotografia.pdf");
       }
 
-    console.log(ticket);
+    // console.log(ticket);
+
     alert(
       `Has generado un ticket con los siguientes datos: \n Fecha: ${fechaFormateada} \n Dirección: ${direccion} \n Fotos: ${fotos} \n Servicio: ${servicio} \n Costo total: $${costoTotal.toFixed(
         2
