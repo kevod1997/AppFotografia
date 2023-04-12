@@ -1,9 +1,6 @@
 aside{
     flex: 25%;
     padding: 20px;
-    background-color: var(--color-gray-light);
-    border-style: groove;
-    border-color: #044b7b;
 }
 .img1{
     width: 95%;
@@ -21,11 +18,11 @@ aside{
     object-fit: cover;
 }
 .t1, .t2, .t3{
-    color: rgb(14, 143, 199);
+    color: rgb(155, 215, 240);
 }
 .t1:hover, .t2:hover, .t3:hover{
-    opacity: 0.5;
-    color: rgb(8, 61, 114);
+    opacity: 1;
+    color: rgb(5, 117, 229);
     background-color: rgba( 0, 0, 0, 0.3);
     padding: 10px;
     border-radius: 10px;

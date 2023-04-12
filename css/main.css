@@ -1,31 +1,22 @@
 .main{
     flex: 75%;
-    height: auto;
-    background-color: #e5e5f7;
-    opacity: 1;
-    background-image: radial-gradient(circle at center center, #c4d8fd, #e5e5f7), repeating-radial-gradient(circle at center center, #c4d8fd, #c4d8fd, 23px, transparent 46px, transparent 23px);
-    background-blend-mode: multiply;
+    padding: 10px;
     }
 .titulo{
-    text-decoration: none;
+    width: 100%;
+    color: white;
     text-align: center;
     justify-content: center;
     font-size: 25px;
     padding: 20px;
-    border-style: groove;
-    border-color: #044b7b;
     }
 .descripciontitulo{
-    float: left;
     width: 30%;
-    height: auto;
-    border-style: groove;
-    border-color: #044b7b;
-    padding: 10px;
+    color: white;
     }
 .imgprincipal{
-    float: right;
-    width: 70%;
+    width: 65%;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
+    float: right;
     }
