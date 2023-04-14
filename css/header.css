@@ -1,26 +1,62 @@
 header{
-    padding: 60px;
-    text-align: center;
-    background-image: url(../img/foto\ de\ bienvenida.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
 }
-header h1{
-    font-size: 40px;
-    margin: 0 0 20px;
+.navbar{
+    display: flex;
 }
-header p{
-    margin: 0 0 10px;
-
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
 }
-header div{
-    background-color: rgba( 0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-    font-size: 20px;
+.navbar a:hover {
+    color: gray;
 }
-.logo{
-    width: 200px;
-    height: 200px;
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+@media (max-width: 768px) {
+    nav {
+        padding: 11px 4%;
+    }
+    #menu-icon {
+        display: initial;
+    }
+    header .navbar {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 4px rgba(36, 35, 35, 0.14);
+        border-top: 2px solid black;
+        transition: 0.2s;
+        text-align: left;
+    }
+    .navbar.active {
+        top: 100%;
+    }
+    .navbar a {
+        padding: 1.5rem;
+        display: block;
+        color: black;
+    }
 }
